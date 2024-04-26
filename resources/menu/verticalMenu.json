@@ -24,12 +24,6 @@
                     "name": "Roles Permissions",
                     "slug": "admin-management-roles-permissions",
                     "permission": "role_permissions.view"
-                },
-                {
-                    "url": "/student/create",
-                    "name": "student",
-                    "slug": "student-create",
-                    "permission": "student.view"
                 }
             ]
         }

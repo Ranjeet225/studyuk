@@ -38,24 +38,24 @@
         </div>
         <!-- /Page Content -->
       </div>
-    <div class="settings-icon"> 
-      <span data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas"><i class="las la-cog"></i></span> 
+    <div class="settings-icon">
+      <span data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas"><i class="las la-cog"></i></span>
     </div>
       <!-- /Page Wrapper -->
      @yield('offcanvas')
     <!-- jQuery -->
     @yield('page-script')
     @yield('scripts')
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    {{-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
     <script src="{{asset('assets/js/jquery-3.7.1.min.js')}}"></script>
     <!-- Bootstrap Core JS -->
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <!-- Slimscroll JS -->
     <script src="{{asset('assets/js/jquery.slimscroll.min.js')}}"></script>
     <!-- Chart JS -->
-    <script src="{{asset('assets/plugins/morris/morris.min.js')}}"></script>
+    {{-- <script src="{{asset('assets/plugins/morris/morris.min.js')}}"></script> --}}
     <script src="{{asset('assets/plugins/raphael/raphael.min.js')}}"></script>
-    <script src="{{asset('assets/js/chart.js')}}"></script>
+    {{-- <script src="{{asset('assets/js/chart.js')}}"></script> --}}
     <script src="{{asset('assets/js/greedynav.js')}}"></script>
     <!-- Theme Settings JS -->
     <script src="{{asset('assets/js/layout.js')}}"></script>
@@ -71,12 +71,12 @@
         $('.sidebar-overlay').click(function(){
           $('#sidebar').removeClass('sidebarNew');
         });
-       
+
       })
     </script>
 
-    <script>
+{{-- <script>
     $('select').selectpicker();
-</script>
+</script> --}}
   </body>
 </html>

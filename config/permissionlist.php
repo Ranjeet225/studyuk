@@ -21,11 +21,5 @@ return [
             'profile.view',
             'profile.update',
         ],
-        'student' => [
-            'student.view',
-            'student.create',
-            'student.edit',
-            'student.update',
-        ],
       ],
 ];

@@ -752,7 +752,7 @@ table td .dropdown.action-label a.btn-rounded.dropdown-toggle::after {
 }
 
 .card .card-body {
-    padding:0px;
+    padding:26px;
 }
 
 ul.bullets {
@@ -5290,7 +5290,7 @@ input[type=file].form-control {
 
 [data-layout-mode=light] body .header {
   background: #fff;
-  
+
 }
 [data-layout-mode=orange] body .header .header-left .logo {
   display: block;
@@ -8168,7 +8168,7 @@ textarea.form-control {
  background-color: #e5e4f0;
   border: 1px solid #e5e4f0;
   color: #695bce;
-    margin-right: -7px;  
+    margin-right: -7px;
   border-radius: 50px;
   margin-top: 4px;
 }
@@ -11605,12 +11605,12 @@ body[data-layout-mode=dark] .alertify .ajs-header {
   #sidebar {
    position: absolute;
    left: -100%;
-   
+
   }
   .sidebarNew {
    position: absolute;
    left: 0px !important;
-   
+
   }
 }
 
@@ -11839,11 +11839,11 @@ padding: 13px 15px !important;
 
   height: auto;
     border-radius: 14px;
-  
+
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
- 
+
   border-radius: 20px;
   background: #7460ee;
   color: white;
@@ -12039,4 +12039,3 @@ padding: 13px 15px !important;
 .mlft{
   margin-left: 10px;
 }
- 

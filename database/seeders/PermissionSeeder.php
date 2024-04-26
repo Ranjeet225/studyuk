@@ -29,8 +29,8 @@ class PermissionSeeder extends Seeder
                 }
             }
             $role->syncPermissions(Permission::all());
-            $input = array('name' => 'RIC','email' => 'ric@test.com', 'status' => 1, 'password' => Hash::make('Test@123'),'admin_type' => 'super_admin');
-            $findUser = User::where('email', 'ric@test.com')->first();
+            $input = array('name' => 'RIC','email' => 'admin@com', 'status' => 1, 'password' => Hash::make('12345678'),'admin_type' => 'super_admin');
+            $findUser = User::where('email', 'admin@com')->first();
             if(empty($findUser)){
                 $user = User::firstOrCreate($input);
                 $user->assignRole([$role->id]);

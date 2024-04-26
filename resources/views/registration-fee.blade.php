@@ -28,14 +28,14 @@
   </head>
   <body>
     <!-- Main Wrapper -->
-    <div class="main-wrapper"> 
-    	<?php  include 'include/header.php'; ?> 
+    <div class="main-wrapper">
+    	<?php  include 'include/header.php'; ?>
     	<?php  include 'include/sidebar.php'; ?>
       <!-- Page Wrapper -->
       <div class="page-wrapper">
         <!-- Page Content -->
-        <div class="content container-fluid"> 
-        	<?php  include 'include/pageheader.php'; ?> 
+        <div class="content container-fluid">
+        	<?php  include 'include/pageheader.php'; ?>
         	<div class="main-content">
             <div class="row">
               <div class="card card-buttons">
@@ -188,7 +188,7 @@
             </div>
           </div>
         </div>
-        <!-- /Page Content --> 
+        <!-- /Page Content -->
         <!--  adduser sidebar start   -->
         <div class="offcanvas offcanvas-end border-0 " tabindex="-1" id="registrationfees">
           <div class="sidebar-headerset" style="  box-shadow: 0 1.6rem 3rem rgba(0,0,0,.1);">
@@ -197,7 +197,7 @@
             </div>
             <div class="sidebar-headerclose">
               <a data-bs-dismiss="offcanvas" aria-label="Close">
-                <img src="assets/img/close.png" alt="Close Icon">
+                <img src="{{asset('assets/img/close.png')}}" alt="Close Icon">
               </a>
             </div>
           </div>
@@ -209,7 +209,7 @@
                 <option value="agent"> Visa Fees </option>
                 <option value="marketing"> Application fees </option>
                 <option value="sub_agent"> Counceling fees </option>
-                <option value="school_manager"> Course fees </option>                
+                <option value="school_manager"> Course fees </option>
               </select>
             </div>
           </div>
@@ -222,12 +222,12 @@
             <div class="col-md-12">
               <input name="name" type="email" class="form-control sidfrm" placeholder="Your email">
             </div>
-          </div>         
+          </div>
           <div class="mysidebar">
             <div class="col-md-12">
               <input name="name" type="number" class="form-control sidfrm" placeholder="Amount (With Gst)">
             </div>
-          </div>       
+          </div>
               <div class="col-md-6">
               <button type="submit" class="btn btn-info d-lg-block  mlft" name="country_submit" value="1">Send Link </button>
                <br>
@@ -290,7 +290,7 @@
     <!-- /Main Wrapper -->
     <!-- jQuery -->
 
- 
+
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Core JS -->
