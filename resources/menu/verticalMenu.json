@@ -1,0 +1,37 @@
+{
+    "menu": [
+        {
+            "url": "/dashboard",
+            "name": "Dashboard",
+            "icon": "menu-icon tf-icons la la-dashboard",
+            "slug": "dashboard",
+            "permission":"dashboard.view"
+        },
+        {
+            "name": "Admin-Management",
+            "icon": "menu-icon tf-icons la la-users",
+            "slug": "admin-management",
+            "permission":["admin_user.view","role_permissions.view","student.view"],
+            "submenu": [
+                {
+                    "url": "/admin-management/users",
+                    "name": "Admin User",
+                    "slug": "admin-management-users",
+                    "permission":"admin_user.view"
+                },
+                {
+                    "url": "/admin-management/roles-permissions",
+                    "name": "Roles Permissions",
+                    "slug": "admin-management-roles-permissions",
+                    "permission": "role_permissions.view"
+                },
+                {
+                    "url": "/student/create",
+                    "name": "student",
+                    "slug": "student-create",
+                    "permission": "student.view"
+                }
+            ]
+        }
+    ]
+  }
