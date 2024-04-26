@@ -8,6 +8,56 @@
             "permission":"dashboard.view"
         },
         {
+            "name": "Manage Leads",
+            "icon": "menu-icon tf-icons la la-user-secret",
+            "slug": "admin",
+            "permission":["leads_dashboard.view","add_leads.view","bulk_upload.view","pending_lead.view","assigned_lead.view","latest_updated_leads.view","oel_360.view"],
+            "submenu": [
+                {
+                    "url": "/admin/leads-dashboard",
+                    "name": "Leads Dashboard",
+                    "slug": "admin-leads-dashboard",
+                    "permission":"leads_dashboard.view"
+                },
+                {
+                    "url": "/admin/add-leads",
+                    "name": "Add Leads",
+                    "slug": "admin-add-leafs",
+                    "permission":"add_leads.view"
+                },
+                {
+                    "url": "/admin/bulk-upload",
+                    "name": "Bulk Upload",
+                    "slug": "admin-bulk-upload",
+                    "permission":"bulk_upload.view"
+                },
+                {
+                    "url": "/admin/pending-lead",
+                    "name": "Pending Lead",
+                    "slug": "admin-pending-lead",
+                    "permission":"pending_lead.view"
+                },
+                {
+                    "url": "/admin/assigned-lead",
+                    "name": "Assigned Lead",
+                    "slug": "admin-assigned-lead",
+                    "permission":"assigned_lead.view"
+                },
+                {
+                    "url": "/admin/latest-updated-lead",
+                    "name": "Latest Updated leads",
+                    "slug": "admin-latest-updated-lead",
+                    "permission":"latest_updated_leads.view"
+                },
+                {
+                    "url": "/admin/oel-360",
+                    "name": "oel 360",
+                    "slug": "admin-oel-360",
+                    "permission":"oel_360.view"
+                }
+            ]
+        },
+        {
             "name": "Admin-Management",
             "icon": "menu-icon tf-icons la la-users",
             "slug": "admin-management",

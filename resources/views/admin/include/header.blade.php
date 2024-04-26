@@ -82,7 +82,20 @@
           <!-- Message Notifications -->
 
           <!-- /Message Notifications -->
-         
+          <li class="nav-item dropdown has-arrow main-drop">
+            <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+              <span class="user-img">
+                <img src="assets/img/profiles/avatar-21.jpg" alt="User Image">
+                <span class="status online"></span>
+              </span>
+              <span>Admin</span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{{url('/profile')}}">My Profile</a>
+              {{-- <a class="dropdown-item" href="#">Settings</a> --}}
+              <a class="dropdown-item" href="{{'/logout'}}">Logout</a>
+            </div>
+          </li>
         </ul>
         <!-- /Header Menu -->
         <!-- Mobile Menu -->
