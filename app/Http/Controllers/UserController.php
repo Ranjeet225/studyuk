@@ -12,6 +12,7 @@ use Illuminate\Validation\ValidationException;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -42,26 +43,23 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         $input = $request->only('name', 'email', 'status', 'password');
-
-        $checkUserExist = User::select(['id'])->where('email', trim($input['email']))->first();
-        if (!empty($checkUserExist)) {
+        $checkUserExist = User::where('email', trim($input['email']))->exists();
+        if ($checkUserExist) {
             throw ValidationException::withMessages([
                 'email' => [__('This Email has already been taken.')],
             ]);
         }
-        if($request->missing('status')){
-            $input['status'] = 0;
-        } else {
-            $input['status'] = 1;
-        }
+        $input['status'] = $request->filled('status') ? 1 : 0;
         $input['password'] = Hash::make($request->password);
         $input['admin_type'] = 'super_admin';
-
-        $user = User::firstOrCreate($input);
-        if($request->filled('role')){
-            $role = Role::find($request->get('role'));
-            if(!empty($role)){
-                $user->assignRole([$request->get('role')]);
+        $userInserted = DB::table('users')->insert($input);
+        if ($userInserted) {
+            $user = User::where('email', $input['email'])->first();
+            if ($request->filled('role')) {
+                $role = Role::find($request->get('role'));
+                if ($role) {
+                    $user->assignRole([$role->id]);
+                }
             }
         }
         return redirect()->route('users.index')->with('success', $user->firstname . ' New User Added Successfully');
@@ -82,7 +80,7 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        
+
         $input = $request->only('firstname','lastname', 'email', 'status');
         if($request->missing('status')){
             $input['status'] = 0;

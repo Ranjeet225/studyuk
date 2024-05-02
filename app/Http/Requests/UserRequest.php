@@ -28,11 +28,11 @@ class UserRequest extends FormRequest
     {
         $rules = [
             'name' => 'required',
+            'role'=>'required',
         ];
-
         $name = Route::currentRouteName();
         if($name == 'users.store'){
-            $rules['password'] = 'required|regex:/^(?=.*?[A-Za-z])(?=.*?[0-9])(?=.*[$!@#$%^_&*!?)(,]{1,}).{8,}$/|min:8';
+            $rules['password'] = 'required|min:8';
             $rules['email'] = 'required|email|max:255|unique:users,email';
         } else {
             $roleId = $this->route('id');

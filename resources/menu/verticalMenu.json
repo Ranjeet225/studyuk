@@ -11,7 +11,7 @@
             "name": "Manage Leads",
             "icon": "menu-icon tf-icons la la-user-secret",
             "slug": "admin",
-            "permission":["leads_dashboard.view","add_leads.view","bulk_upload.view","pending_lead.view","assigned_lead.view","latest_updated_leads.view","oel_360.view"],
+            "permission":["leads_dashboard.view","add_leads.view","bulk_upload.view","pending_lead.view","assigned_lead.view","latest_updated_leads.view","oel_360.view","leads_lists.view"],
             "submenu": [
                 {
                     "url": "/admin/leads-dashboard",
@@ -22,8 +22,14 @@
                 {
                     "url": "/admin/add-leads",
                     "name": "Add Leads",
-                    "slug": "admin-add-leafs",
+                    "slug": "admin-add-leads",
                     "permission":"add_leads.view"
+                },
+                {
+                    "url": "/admin/leads-lists",
+                    "name": "Leads List",
+                    "slug": "admin-leads-lists",
+                    "permission":"leads_lists.view"
                 },
                 {
                     "url": "/admin/bulk-upload",

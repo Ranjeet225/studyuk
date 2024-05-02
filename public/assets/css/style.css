@@ -11766,9 +11766,9 @@ body[data-layout-mode=dark] .alertify .ajs-header {
   margin: 0px;
 }
 
-#basictab1 {
+/* #basictab1 {
   padding: 0px 20px;
-}
+} */
 
 
 #lead-fm {
@@ -11981,7 +11981,7 @@ padding: 13px 15px !important;
 }
 
   #basictab1
-{
+/* {
   padding: 0px 20px;
 }
 
@@ -12001,7 +12001,7 @@ padding: 13px 15px !important;
 #basictab5
 {
   padding: 0px 20px;
-}
+} */
 #basictab6
 {
   padding: 0px 20px;

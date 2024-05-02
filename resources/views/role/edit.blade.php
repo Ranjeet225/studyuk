@@ -89,7 +89,9 @@
         </div>
         <div class="col-12 text-center">
           <input name="save" id="save" class="btn btn-primary" type="submit" value="Update">
-          <button name="cancel" class="btn btn-outline-secondary close-popup" type="button">Cancel</button>
+          <a href="{{url('admin-management/roles-permissions/')}}">
+            <button name="cancel" class="btn btn-outline-secondary close-popup" type="button">Cancel</button>
+          </a>
           <div class="errors">
         </div>
     </form>
